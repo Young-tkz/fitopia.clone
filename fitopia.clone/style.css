@@ -1,0 +1,238 @@
+
+/* Reset and base styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    background: #fff;
+    color: #000;
+}
+
+/* Header/Navbar */
+header {
+    width: 100%;
+    padding-top: 20px;
+    background: transparent;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.logo img {
+    width: 90px;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 48px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a,
+.nav-links li {
+    text-decoration: none;
+    color: #000;
+    font-size: 22px;
+    font-weight: 400;
+    transition: color 0.2s;
+}
+
+.nav-links li a:hover,
+.nav-links li:hover {
+    color: #133bb7;
+}
+
+.nav-action .nav-btn {
+    border: 2px solid #133bb7;
+    background: #fff;
+    color: #133bb7;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 12px;
+    padding: 12px 32px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-action .nav-btn:hover {
+    background: #133bb7;
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 80vh;
+    padding: 80px 0 0 0;
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hero-content {
+    flex: 1;
+    padding-left: 120px;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 64px;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    line-height: 1.1;
+}
+
+.hero-content h1 span {
+    font-size: 72px;
+    font-weight: 900;
+    letter-spacing: 0.18em;
+    display: inline-block;
+}
+
+.typing {
+    font-size: 40px;
+    font-weight: 700;
+    margin: 0 0 16px 0;
+    min-height: 48px;
+}
+
+.blue {
+    color: #133bb7;
+}
+
+.cursor {
+    color: #133bb7;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.hero-content p {
+    font-size: 22px;
+    margin: 24px 0 32px 0;
+}
+
+.hero-btn,
+.hero-content .hero-btn {
+    background: #133bb7;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 700;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 40px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 10px;
+}
+
+.hero-btn:hover,
+.hero-content .hero-btn:hover {
+    background: #0d2a7a;
+}
+
+/* Hero Image and FITOPIA BG */
+.hero-image {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    min-width: 400px;
+    max-width: 600px;
+    height: 100%;
+}
+
+.fitopia-bg {
+    position: absolute;
+    left: 0;
+    top: 20%;
+    font-size: 200px;
+    color: #eaeaea;
+    font-weight: 700;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+    letter-spacing: 0.1em;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+    z-index: 2;
+    filter: drop-shadow(0 10px 40px rgba(0,0,0,0.15));
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 0 0 0;
+    }
+    .hero-content {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .hero-image {
+        width: 100%;
+        justify-content: center;
+        margin-top: 40px;
+        min-width: 0;
+        max-width: 100vw;
+    }
+    .fitopia-bg {
+        font-size: 100px;
+        top: 10%;
+    }
+}
+
+@media (max-width: 700px) {
+    nav {
+        flex-direction: column;
+        gap: 16px;
+        padding: 0 10px;
+    }
+    .nav-links {
+        gap: 20px;
+        font-size: 18px;
+    }
+    .nav-action .nav-btn {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+    .hero-content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .hero-content h1 {
+        font-size: 36px;
+    }
+    .hero-content h1 span {
+        font-size: 40px;
+    }
+    .typing {
+        font-size: 24px;
+    }
+    .fitopia-bg {
+        font-size: 40px;
+        top: 10%;
+    }
+    .hero-image img {
+        max-width: 220px;
+    }
+}
